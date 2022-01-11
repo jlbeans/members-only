@@ -1,0 +1,6 @@
+
+<% @posts.each do |post| %>
+<p><strong><%= post.title %>:</strong>
+           <%= post.body %></p>
+<p>Posted on: <%= post.created_at.strftime("%d-%m-%Y (%A)") %> </p>
+<%end%>

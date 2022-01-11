@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+ /* Import bulma file */
+ @import "bulma";
+
+ .navbar-brand .title {
+   color: white;
+ }
+
+ .notification:not(:last-child){
+   margin-bottom: 0;
+ }
