@@ -1,17 +1,18 @@
 
-<% @posts.each do |post| %>
-  <div class="box">
-    <div class="media-content">
-      <div class="content">
-        <p><strong><%= post.title %></strong></p>
-        <p><%= post.body %></p>
-        <p>Posted on: <%= post.created_at.strftime("%d-%m-%Y (%A)") %></p>
-          <div class="author-content">
-            <% if user_signed_in? %>
-              <span class="author">Posted by: <strong><%=post.user.name%></strong></span>
-            <%else%>
-              <span class="author">Posted by: <strong>Sign in to see who posted</strong></span>
-            <%end%>
+  <p class="title is-4">Post feed</p>
+   <% @posts.each do |post| %>
+     <div class="box">
+       <div class="media-content">
+         <div class="content">
+           <p><strong><%= post.title %></strong></p>
+           <p><%= post.body %></p>
+           <p>Posted on: <%= post.created_at.strftime("%d-%m-%Y (%A)") %></p>
+             <div class="author-content">
+               <% if user_signed_in? %>
+                 <span class="author">Posted by: <strong><%=post.user.name%></strong></span>
+               <%else%>
+                 <span class="author">Posted by: <strong>Sign in to see who posted</strong></span>
+               <%end%>
 
             <% if user_signed_in? && current_user.id == post.user_id %>
               <span class="options">
