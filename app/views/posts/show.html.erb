@@ -1,0 +1,22 @@
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-two-thirds">
+        <div class="media box">
+          <div class="media-content">
+            <h1 class="title is-2">
+              <%= @post.title %>
+            </h1>
+            <div class="field">
+              <div class="control">
+              <%= @post.body %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <%= render "feed" %>
+      </div>
+    </div>
+  </div>
+</section>

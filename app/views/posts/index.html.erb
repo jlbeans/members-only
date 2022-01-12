@@ -2,8 +2,13 @@
 <section class="section">
   <div class="container">
     <div class="columns">
-       <%= render 'posts/form' %>
-       <%= render 'feed' %>
+      <div class="column is-two-thirds">
+         <%= render 'form' %>
+      </div>
+
+       <div class="column">
+         <%= render 'feed' %>
+       </div>
     </div>
   </div>
 </section>
